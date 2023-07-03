@@ -52,9 +52,9 @@ void ucdRankingSystem() {
     UCDScore myUCD;
     cout << "Please enter your overall scores for the User-centered Design course: ";   // students input their scores
     cin >> myUCD.ucdScore;
-    cout << "Got your web score = " << myUCD.ucdScore << "\n";   // system confirm the scores to prepare for their results
+    cout << "Got your UCD overall score = " << myUCD.ucdScore << "\n";   // system confirm the scores to prepare for their results
     if (myUCD.ucdScore < 50 && myUCD.ucdScore > 0) {
-        cout << "You have failed the UCD course. \n";
+        cout << "Sorry, you have failed the UCD course. \n";
         myUCD.ucdRank = "NN";
         cout << "Your rank is " << myUCD.ucdScore << "\n" ;
     } else if (myUCD.ucdScore > 50 && myUCD.ucdScore < 100) {
