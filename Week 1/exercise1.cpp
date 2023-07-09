@@ -2,24 +2,24 @@
 using namespace std;
 
 int main() {
-    cout << "Hello everyone! This is exercise 1 \n";
-    cout << "We will solve the liner ax+b=0 ! \n";
-    double r;
+    cout << "Hello C++ friends! This is exercise 1 of the tutorial! \n";
+    cout << "We will solve the linear equation ax + b = 0 today! \n";
+    float x;
     int a;
-    cout << "Enter your numbers for the a here \n";
+    cout << "Enter your numbers for the a here! \n";
     cin >> a;
     int b;
-    cout << "Do the same for the b here \n";
+    cout << "Do the same for the b here! \n";
     cin >> b;
     if (a == 0) {
         if (b == 0) {
-            cout << "This equation has infinite solutions" << endl;
+            cout << "This equation has infinite solutions! Free to choose" << endl;
         } else {
-            cout << "This equation has NO solutions " << endl;
+            cout << "Sorry but this equation has NO solutions! " << endl;
         }
     } else {
-        r = -b/a;
-        cout << "The equation root is: " << r << endl;
+        x = (-1.0 * b)/a;
+        cout << "There is only 1 equation root, and it is: " << x << endl;
     }
     return 0;
 }

@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
+    cout << "Hello friends, this is question 4 of the tutorial!"
     int n, f = 0, r;
-    cout << "Enter your integer: \n";
+    cout << "Please enter your number (do NOT give an imaginary number): \n";
     cin >> n;
     while(n != 0) {
         r = n % 10;
