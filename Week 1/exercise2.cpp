@@ -27,10 +27,33 @@ int sum(int arr[], int n) {
 }
 
 int main() {
-    cout << "Hello friends! This is exercise 2, let's try some array! \n";
-    userInput();
-    print();
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << "Sum of the given array is " << sum(arr, n);
+    int array[size], i, max, total = 0;
+
+    cout << "Please enter values of 5 integers for your string : ";
+
+    for(i=0; i< size; i++) {
+        cin >> array[i];
+    }
+    
+    max = array[0];
+    for(i=0; i< size; i++)
+    {
+        if(array[i] > max)
+        {
+            max = array[i];
+        }
+        total += array[i];
+    }
+
+    cout << "Your 5 integers are as follows: ";
+    for(i=0; i< size; i++)
+    {
+        cout << array[i] << ' ';
+    }
+    
+    cout << "\nMax value of the array: " << max;
+    cout << "\nAverage value of the array: " << (double)total/SIZE;
+    cout << "\n";
+
     return 0;
 }
