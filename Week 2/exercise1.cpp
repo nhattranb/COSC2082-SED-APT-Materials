@@ -26,7 +26,7 @@ int main() {
     print();
     min = myInts[0];
     for(i = 0; i < size; i++){
-        if(myInts[i] < min){
+        if(myInts[i] < min) {
             min = myInts[i];
         }
     }
