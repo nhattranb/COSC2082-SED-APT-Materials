@@ -25,5 +25,7 @@ class Person {
 
 int main() {
     Person myPer1("Puppy", 6, "Nhat");
-    Person myPer2("Tom", )
+    Person myPer2("Tom", 5, "Phat");
+    Person myPer3("Chihuahua", 4, "Duy");
+    string h = Person myPer3;
 }
