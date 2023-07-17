@@ -4,13 +4,29 @@
 using namespace std;
 
 class ComplNum {
-    private:
+private:
     int real;
     double imag;
-    public:
+
+int getReal() {
+	return this->real;
+}
+void setReal(int real) {
+	this->real = real;
+}
+
+
+double getImag() {
+    return this->imag;
+}
+void setImag(double imag) {
+    this->imag = imag;
+}
+
+public:
     cout << "Testing the code \n";
 };
 
 int main() {
-    
+
 }
