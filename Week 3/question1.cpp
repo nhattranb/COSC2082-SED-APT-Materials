@@ -13,7 +13,7 @@ int main() {
     }
 
     int num = 10;
-    myfile << num << " Hello World !";
+    myfile << num << " Writing to a .dat file !";
     myfile.close(); // close the file.
     cout << "Wrote to the file ! \n"
 }
