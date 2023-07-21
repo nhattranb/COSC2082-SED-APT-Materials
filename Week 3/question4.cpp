@@ -1,3 +1,5 @@
+/* THE CODE IS GENERATED USING BING GPT COPILOT*/
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -28,7 +30,7 @@ int main() {
     Cat cat2("Jerry", 4);
     Cat cat3("Nibbles", 5);
 
-    Person people[3] = { Person(cat1, "Nhat"), Person(cat2, "Anna"), Person(cat3, "Ling") };
+    Person people[3] = { Person(cat1, "Mr. Nhat"), Person(cat2, "Ms. Anna"), Person(cat3, "Mr. Ling") };
 
     int maxAge = -1;
     int Index = -1;
@@ -41,8 +43,8 @@ int main() {
     }
 
     cout << "The person with the oldest cat is " << people[Index].name << endl;
-    cout << "The cat's name is " << people[Index].cat.name << endl;
-    cout << "The cat's age is " << people[Index].cat.age << endl;
+    cout << "The oldest cat's name is " << people[Index].cat.name << endl;
+    cout << "The oldest cat's age is " << people[Index].cat.age << endl;
 
     return 0;
 }
