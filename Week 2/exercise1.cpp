@@ -6,18 +6,18 @@ int size = 5;
 int myInts[size];
 
 void userInput() {
-    cout<<"Enter your array elements: "<<endl;
+    cout << "Enter your array elements: "<<endl;
     for(int i = 0; i < size; i++) {
-        cin>>myInts[i];
+        cin >> myInts[i];
     }
 }
 
 void print() {
-    cout<<"The array elements are: "<<endl;
+    cout << "The array elements are: "<<endl;
     for(int i = 0;i < size; i++) {
-        cout<<myInts[i]<<" ";
+        cout << myInts[i] <<" ";
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int main() {
