@@ -4,6 +4,9 @@
 using namespace std;
 
 class Student {
+    private:
+    string password;
+    
     public:
     int score;
     string name;

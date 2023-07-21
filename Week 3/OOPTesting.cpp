@@ -3,13 +3,29 @@
 using namespace std;
 
 class Rectangle {
-    public:
+public:
     int width;
     int height;
-    Rectangle(int myWidth, int myHeight) {
-        width = myWidth;
-        height = myHeight;  
-    }
+
+int getWidth() {
+	return this->width;
+}
+void setWidth(int width) {
+	this->width = width;
+}
+
+int getHeight() {
+    return this->height;
+}
+void setHeight(int height) {
+    this->height = height;
+}
+
+Rectangle(int getWidth, int getHeight) {
+    width = getWidth;
+    height = getHeight;  
+}
+
 };
 
 int main() {
