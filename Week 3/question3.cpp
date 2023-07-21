@@ -4,6 +4,9 @@
 using namespace std;
 
 class Student {
+    private:
+    string password;
+    
     public:
     int score;
     string name;
@@ -26,6 +29,14 @@ class Student {
         name = myName;
         score = myScore;  
     }
+
+    public:
+        void changePwd() {
+            fstream Password;
+            Password.open("pass.dat");
+            Password << "UTIMstudent2020 \n";
+            Password.close();
+        }
 };
 
 int main() {
