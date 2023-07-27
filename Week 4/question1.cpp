@@ -24,9 +24,9 @@ void setImag(double imag) {
 }
 
 public:
-    cout << "Testing the code \n";
+    
 };
 
 int main() {
-
+    cout << "Code testing \n";
 }
