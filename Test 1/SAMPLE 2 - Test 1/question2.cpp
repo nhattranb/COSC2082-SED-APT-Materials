@@ -15,6 +15,8 @@
 #include <string>
 using namespace std;
 
+#define Size 4
+
 class EWallet {
     private:
        string name;
@@ -23,6 +25,10 @@ class EWallet {
        double newAmount;
        string coupon;
     public:
+    EWallet() {
+
+    }
+
     EWallet(string name, double balance) {
         this->name = name;
         this->balance = balance;
@@ -51,6 +57,8 @@ class User {
        string userpwd;
        EWallet acc;
     public:
+    User() {}
+    
     User(string name, string pwd, EWallet acc) {
         this->name = name;
         this->pwd = pwd;
@@ -62,16 +70,32 @@ class User {
         cin >> userpwd;
         if (userpwd != pwd) {
             cout << "Your password is correct. \n";
+            return true;
         } else {
             cout << "Incorrect password. Please retype your password. \n";
+            return false;
         }
     }
 
     bool doPayment() {
-        verifyPass();
+        bool vp = verifyPass();
+        if (vp = true) {
+            int trans;
+            string couponCode;
+            cout << "Enter the amount of money to transfer \n";
+            cin >> trans;
+            cout << "Enter the coupon code \n";
+            cin >> couponCode;
+            EWallet ew();
+            int b = ew.Balance();
+        }
     }
 };
 
 int main() {
-
+    User user[Size];
+    for (int i = 0; i < Size; i++) {
+        user[i] = User();
+    }
+    ...;
 }

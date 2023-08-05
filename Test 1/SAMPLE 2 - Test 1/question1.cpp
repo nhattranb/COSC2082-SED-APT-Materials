@@ -23,7 +23,9 @@ int main(int argc, char **argv) {
     double price;
     cout << "You have entered " << argc << " arguments:"
          << "\n";
- 
+
+    string argv[1];
+    
     for (int i = 0; i < argc; ++i) {
         cout << argv[i] << "\n";
         if (argv[1] != "w") {
