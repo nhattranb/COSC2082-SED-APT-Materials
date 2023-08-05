@@ -23,5 +23,6 @@ int main() {
     cout << "Welcome to the program! \n";
     Account bankAcc1("Nhat Tran", 6790000);
     Account bankAcc2("Anna Felipe", 7520000);
-    Account bankAcc3("Ling Huo", 7670000);
+    Account bankAcc3("Quang Nhat Tran", 7670000);
+    
 }
