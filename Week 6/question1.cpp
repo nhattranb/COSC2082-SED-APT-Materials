@@ -61,6 +61,10 @@ class Tutor: public Staff, public Student {
     string consultation() {
         cout << "Doing the consultation! \n";
     }
+
+    ~Tutor(){
+        cout << "Destructor activated! \n";
+    }
 };
 
 int main(){

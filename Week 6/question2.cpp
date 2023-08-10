@@ -3,6 +3,7 @@
 #include <sstream>
 #include <cstring>
 #include <iomanip>
+#include <vector>
 using namespace std;
 
 
@@ -61,11 +62,42 @@ class Tutor: public Staff, public Student {
     string consultation() {
         cout << "Doing the consultation! \n";
     }
+
+    ~Tutor(){
+        cout << "Destructor activated! \n";
+    }
+};
+
+class StudentSystem {
+    public:
+    vector <Student> students;
+
+    void AddStudent() {
+
+    }
+
+    void RemoveStudent() {
+
+    }
 };
 
 int main(){
+    int choice;
+    
+    cout << "Testing the application... \n";
     Student s1("Nhat Tran", 3926629);
     Student s2("Teddy", 3777773);
     Staff t1("Anna Lyza Felipe", 176671);
     Staff t2("Ling Huo Chong", 169960);
+    cout << s1.StudentID << s1.Name << "\n";
+    cout << t1.staffID << t1.name << "\n";
+    
+    cout << "Welcome to the School Management System \n";
+    cout << "1. View all students \n";
+    cout << "2. Add Student \n";
+    cout << "3. Remove Student \n";
+    cout << "4. Exit \n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+    return 0;
 }
