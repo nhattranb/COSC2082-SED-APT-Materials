@@ -12,72 +12,45 @@ class Student {
     string Name;
     int StudentID;
 
-    Student(string Name, int StudentID) {
+    Student(string Name="", int StudentID=0) {
         this->Name = Name;
         this->StudentID = StudentID;
+        cout << "a student \n";
     }
 
-    string toString() {
+    virtual string toString() {
         return "Student Name: " + Name + " - Student ID: " + to_string(StudentID) + "\n";
     }
 
     ~Student(){
-        cout << "Destructor activated! \n";
+        cout << "Student Destructor activated! \n";
     }
 };
 
-class Staff {
+void showInfoStudent(Student &stu) {
+    cout << stu.toString();
+}
+
+class SchoolSystem {
     public:
-    string name;
-    int staffID;
+    vector<Student> students;
 
-    Staff(string name, int staffID) {
-        this->name = name;
-        this->staffID = staffID;
+    void addStudent() {
+        Student s;
+        cout << "Enter the student name: \n";
+        cin >> s.Name;
+        cout << "Enter the student ID: \n";
+        cin >> s.StudentID;
+        students.push_back(s);
     }
 
-    string toString() {
-        return "Staff Name: " + name + " - Staff ID: " + to_string(staffID) + "\n";
-    }
-
-    ~Staff(){
-        cout << "Destructor activated! \n";
-    }
-};
-
-class Tutor: public Staff, public Student {
-    private:
-    int tutID;
-    
-    public:
-    Tutor(int tutID): Staff(name, staffID), Student(Name, StudentID) {
-        this->tutID = tutID;
-    }
-
-    void setName(string tutName) {
- 	    cout << "Enter the tutor's name: \n";
-        cin >> tutName;
-    }
-
-    string consultation() {
-        cout << "Doing the consultation! \n";
-    }
-
-    ~Tutor(){
-        cout << "Destructor activated! \n";
-    }
-};
-
-class StudentSystem {
-    public:
-    vector <Student> students;
-
-    void AddStudent() {
-
-    }
-
-    void RemoveStudent() {
-
+    void removeStudent() {
+        Student s;
+        cout << "Enter the student ID: \n";
+        cin >> s.StudentID;
+        cout << "Enter the student ID: \n";
+        cin >> s.StudentID;
+        students.pop_back(s);
     }
 };
 
@@ -86,11 +59,8 @@ int main(){
     
     cout << "Testing the application... \n";
     Student s1("Nhat Tran", 3926629);
-    Student s2("Teddy", 3777773);
-    Staff t1("Anna Lyza Felipe", 176671);
-    Staff t2("Ling Huo Chong", 169960);
-    cout << s1.StudentID << s1.Name << "\n";
-    cout << t1.staffID << t1.name << "\n";
+    Student s2("Phat Tran", 3777773);
+    cout << s1.StudentID << " " << s1.Name << "\n";
     
     cout << "Welcome to the School Management System \n";
     cout << "1. View all students \n";
@@ -99,5 +69,11 @@ int main(){
     cout << "4. Exit \n";
     cout << "Enter your choice: ";
     cin >> choice;
+
+    ofstream myfile;
+    myfile.open ("students.dat", );
+    myfile << s1.Name << s1.StudentID << "\n";
+    myfile << s2.Name << s1.StudentID << "\n";
+    myfile.close();
     return 0;
 }
