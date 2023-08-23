@@ -24,6 +24,7 @@ class Book {
 class User {
     private:
     string name;
+    int avCopies;
     vector<Book*> books;
 
     public:
@@ -33,10 +34,10 @@ class User {
     }
 
     bool doBorrow(Book &abook) {
-        if (Book.avCopies = 0) {
+        if (avCopies = 0) {
            return false;
         } else {
-           abook.decreaseAvailableCopies();
+           avCopies = avCopies - 1;
            abook.addBorrowerName("John Doe");
            return true;
         }
@@ -46,3 +47,13 @@ class User {
 
     } 
 };
+
+int main() {
+    User u1("Tran Minh Nhat", 2);
+    vector<Book*> books;
+    for (int i = 0; i < 3; i++) {
+        Book* book = new Book();
+        books.push_back(book);
+    }
+    return 0;
+}
