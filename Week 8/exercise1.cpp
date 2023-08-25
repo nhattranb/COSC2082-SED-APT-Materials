@@ -92,11 +92,5 @@ int main() {
     User user3("Josh Dwight", vector<Book*>{});
 
     books.showInfo();
-
-
-    for (int i = 0; i < 3; i++) {
-        Book* book = new Book();
-        books.push_back(book);
-    }
     return 0;
 }

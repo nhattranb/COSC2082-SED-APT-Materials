@@ -18,6 +18,10 @@ class Staff {
         this->name = name;
         this->dep = dep;
     }
+
+    void joinDept(Department &dept) {
+
+    }
 };
 
 class Department {
