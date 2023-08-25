@@ -12,6 +12,8 @@ class Staff {
     string dep;
 
     public:
+    Staff() {}
+    
     Staff(string name="", string dep="") {
         this->name = name;
         this->dep = dep;
@@ -23,6 +25,15 @@ class Department {
     string name;
     string location;
     vector<Staff*> list;
+
+    public:
+    Department() {}
+
+    Department(string name="", string location="", vector<Staff*> list) {
+        this->name = name;
+        this->location = location;
+        this->list = list;
+    }
 };
 
 class Academic: public Department {
@@ -32,3 +43,8 @@ class Academic: public Department {
 class Service: public Department {
 
 };
+
+int main() {
+    cout << "testing the code... ";
+    return 0;
+}
