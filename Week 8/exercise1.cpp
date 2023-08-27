@@ -25,13 +25,13 @@ class Book {
         return "Book Name: " + title + "has " + to_string(avCopies) + " copies available. \n";
     }
 
+    void showInfo(Book &book) {
+        cout << book.toString();
+        cout << "List of borrowers: ";
+    }
+
     friend class User;
 };
-
-void showInfo(Book &book) {
-    cout << book.toString();
-    cout << "List of borrowers: ";
-}
 
 class User {
     private:
@@ -78,19 +78,20 @@ class User {
     virtual string toString() {
         return "User Name: " + name + " is using the service. \n";
     }
+
+    void showInfo (User &user) {
+        cout << user.toString();
+    }
+
+    friend class Book;
 };
 
 int main() {
-    User u1("Tran Minh Nhat", 2);
     vector<Book*> books = {
-        new Book("Queen Elizabeth II - 71 Years, A Memorable Journey", 5, vector<string>{});
-        new Book("Learning to Code with Ling Huo", 6, vector<string>{});
-        new Book("Tom Huynh: From ProGAMER to ProGRAMMER", 3, vector<string>{});
-    }
-    User user1("Nhat Tran", vector<Book*>{});
+        new Book("Queen Elizabeth II - 71 Years, A Memorable Journey", 5, vector<string>{}); }
+    User user1("Nhat Tran");
+    user1.showInfo();
     User user2("Anna Lyza Felipe", vector<Book*>{});
     User user3("Josh Dwight", vector<Book*>{});
-
-    books.showInfo();
     return 0;
 }
