@@ -22,39 +22,27 @@ public:
     //function to set connection
     void setNextBuyer(Broker *next) { nextBuyer = next; }
 
-    friend void showFordLinks(Broker *head);
-    friend void minProfits(Broker *head);
+    friend void show(Broker *head);
+    friend void minProfit(Broker *head);
 };
 
 // Question a
-void showFordLinks(Broker *head) {
-    Broker *temp = head; // temp is current node
-
-    while (temp != nullptr) {
-        // print out current broker's name and buy price
-        if (temp == head) {
-            cout << temp->name << " : "
-                 << "initially bought the house for $" << temp->buyPrice << "\n";
-        } else {
-            cout << temp->name << " : "
-                 << "price = $" << temp->buyPrice << "\n";
+void show(Broker *head) {
+    Broker *curr = head;
+    if(head == nullptr) {
+        cout << "nothing here \n";
+    } else {
+        cout << curr->name << "bought the house by " << curr->buyPrice;
+        curr = curr->nextBuyer;
+        while (curr->nextBuyer != nullptr) {
+            cout << curr->name << " --> " << curr->nextBuyer->name << ": price = $ " << curr->buyPrice << "\n";
+            curr = curr->nextBuyer;
         }
-
-        // print out the current broker's name (for next node)
-        if (temp->nextBuyer != nullptr) {
-            cout << temp->name << " --> ";
-        }
-
-        temp = temp->nextBuyer; // go to the next node
     }
-
-    cout << "\n";
 }
 
-
-
 // Qb
-void minProfits(Broker *head) {
+void minProfit(Broker *head) {
     Broker *temp = head; // temp is the current node
 
     // Assume that the first broker has lowest profit
@@ -71,7 +59,7 @@ void minProfits(Broker *head) {
                 minBroker = temp;
             }
         } 
-        temp = temp->nextBuyer; // go the next node
+        temp = temp->nextBuyer; // go to the next node
     }
 
     if (minBroker != nullptr) {
@@ -80,7 +68,6 @@ void minProfits(Broker *head) {
                 << "\n\n";
     }
 }
-
 
 int main() {
     // create nodes
@@ -96,10 +83,10 @@ int main() {
     broker5.setNextBuyer(nullptr);
     Broker *tail = &broker5; // pointer variable
 
-    showFordLinks(head);
+    show(head);
 
     // Qb. show brokers with min profit
-    minProfits(head);
+    minProfit(head);
 
     return 0;
 }
