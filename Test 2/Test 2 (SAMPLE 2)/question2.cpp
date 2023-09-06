@@ -41,10 +41,4 @@ int main() {
          cout << head->name << "(" << head->expense << ")" << " --> ";
          head = head->next;
      }
-    int largestExp = c1.expense;
-    for (int i = 1; i < 4; i++) {
-        if(largestExp < head->expense) {
-            largestExp = c2->expense;
-        }
-    }
 }
