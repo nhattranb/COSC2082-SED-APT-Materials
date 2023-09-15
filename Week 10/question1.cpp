@@ -3,26 +3,18 @@ using namespace std;
 
 template <typename T>
 
-void swap(T& a, T& b) {
-    T temp = a;
+void swap(int &a, int &b) {
+    int temp = a;
     a = b;
     b = temp;
 }
 
 int main() {
-    int x = 5, y = 10;
-    double p = 3.14, q = 6.28;
-
+    int a = 5, b = 10;
     cout << "Before swapping: " << endl;
-    cout << "x = " << x << ", y = " << y << endl;
-    cout << "p = " << p << ", q = " << q << endl;
-
-    swap(x, y);
-    swap(p, q);
-
+    cout << "x = " << a << ", y = " << b << endl;
+    swap<int>(a, b);
     cout << "\nAfter swapping: " << endl;
-    cout << "x = " << x << ", y = " << y << endl;
-    cout << "p = " << p << ", q = " << q << endl;
-
+    cout << "x = " << a << ", y = " << b << endl;
     return 0;
 }
