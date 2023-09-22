@@ -1,0 +1,6 @@
+/*
+    Command to compile:
+    Get into the folder, then type: 
+        g++ *.cpp     ; //it will create an executable file (a.out or a.exe by default)
+        ./a.exe       ; //run the file on Windows (on MacOS/ Linux, we use ./a.out)
+*/
