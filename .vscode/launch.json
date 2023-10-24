@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/Acer/EEET2482-COSC2082-SED-APT-Materials/Quiz",
+      "program": "c:/Users/Acer/EEET2482-COSC2082-SED-APT-Materials/Quiz/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
